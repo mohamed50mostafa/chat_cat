@@ -61,7 +61,7 @@ MIDDLEWARE = [
 ]
 
 # 2. تقييد الـ CORS (حظر الوصول المطلق)
-CORS_ALLOW_ALL_ORIGINS = False
+CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOWED_ORIGINS = [
     "https://chat-51zccrfq3-mohameds-projects-78431806.vercel.app/",  # رابط تطبيق الواجهة الأمامية الخاص بك فقط
 ]
