@@ -4,13 +4,16 @@ from rest_framework.permissions import IsAuthenticated, AllowAny
 from rest_framework.response import Response
 from rest_framework import status
 import pusher
-import environs
 
 from .models import Channel, Message
 from .serializers import ChannelSerializer, MessageSerializer, UserSerializer
 
-# Initialize environment variables
-env = environs.Env()
+import environ
+env = environ.Env()
+
+# ثم داخل إعدادات Pusher:
+app_id=env('PUSHER_APP_ID')
+# ... وهكذا مع الباقي
 
 # Initialize Pusher client securely
 pusher_client = pusher.Pusher(
