@@ -71,7 +71,7 @@ CORS_ALLOW_METHODS = ["DELETE", "GET", "OPTIONS", "PATCH", "POST", "PUT"]
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 if not DEBUG:
-    SECURE_SSL_REDIRECT = True
+    SECURE_SSL_REDIRECT = False  # يمكنك تفعيلها لاحقًا عند نشر التطبيق على HTTPS
     SESSION_COOKIE_SECURE = True
     CSRF_COOKIE_SECURE = True
     SECURE_BROWSER_XSS_FILTER = True
