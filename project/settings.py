@@ -69,14 +69,10 @@ CORS_ALLOW_CREDENTIALS = True
 
 CORS_ALLOW_METHODS = ["DELETE", "GET", "OPTIONS", "PATCH", "POST", "PUT"]
 if not DEBUG:
-    # هذا السطر يخبر دجانجو أن يثق في توجيه خوادم Railway الآمن
     SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-    
     SECURE_SSL_REDIRECT = True
     SESSION_COOKIE_SECURE = True
     CSRF_COOKIE_SECURE = True
-    SECURE_BROWSER_XSS_FILTER = True
-    SECURE_CONTENT_TYPE_NOSNIFF = True
 
 ROOT_URLCONF = 'project.urls'
 
