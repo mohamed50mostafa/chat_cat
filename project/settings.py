@@ -25,7 +25,7 @@ SECRET_KEY = env.str('SECRET_KEY', default='django-insecure-3bble_ecjubt8reo+b#x
 DEBUG = env.bool('DEBUG', default=True)
 
 # 1. تحديث ALLOWED_HOSTS لقراءة البيانات من ملف البيئة
-ALLOWED_HOSTS = env.list('ALLOWED_HOSTS', default=[])
+ALLOWED_HOSTS = env.list('ALLOWED_HOSTS', default=['*'])
 
 # Application definition
 INSTALLED_APPS = [
