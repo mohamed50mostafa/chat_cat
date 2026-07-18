@@ -6,12 +6,11 @@ from rest_framework_simplejwt.views import (
 from . import views
 
 urlpatterns = [
-    # Authentication Endpoints
+    # Authentication
     path('api/register/', views.register_user, name='register'),
     path('api/login/', TokenObtainPairView.as_view(), name='login'),
     path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
-
-    # Chat Engine & Channels Endpoints
+    # Chat
     path('api/channels/create/', views.create_channel, name='create_channel'),
     path('api/channels/', views.get_channels, name='get_channels'),
     path('api/messages/send/', views.send_message, name='send_message'),

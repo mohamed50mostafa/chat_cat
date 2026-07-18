@@ -11,11 +11,8 @@ from .serializers import ChannelSerializer, MessageSerializer, UserSerializer
 import environ
 env = environ.Env()
 
-# ثم داخل إعدادات Pusher:
 app_id=env('PUSHER_APP_ID')
-# ... وهكذا مع الباقي
 
-# Initialize Pusher client securely
 pusher_client = pusher.Pusher(
     app_id=env('PUSHER_APP_ID'),
     key=env('PUSHER_KEY'),
